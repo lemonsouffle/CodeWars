@@ -8,8 +8,7 @@
 # Error checking for text strings or other invalid inputs is not required, only valid positive non-zero integers will be passed into the function.
 
 def narcissistic(value):
-    l = len(str(value))
-    digits = [int(str(value)[i])**l for i in range(l)]
+    digits = [int(str(value)[i])**len(str(value)) for i in range(len(str(value)))]
     return sum(digits) == value
     
 print(narcissistic(7))
