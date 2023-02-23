@@ -6,3 +6,13 @@
 # This may be True and False in your language, e.g. PHP.
 
 # Error checking for text strings or other invalid inputs is not required, only valid positive non-zero integers will be passed into the function.
+
+def narcissistic(value):
+    l = len(str(value))
+    digits = [int(str(value)[i])**l for i in range(l)]
+    return sum(digits) == value
+    
+print(narcissistic(7))
+print(narcissistic(371))
+print(narcissistic(122))
+print(narcissistic(4887))
