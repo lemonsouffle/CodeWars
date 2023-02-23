@@ -11,7 +11,6 @@
 
 def spin_words(sentence):
     my_list = sentence.split(' ')
-    new_sentence = ''
     for i in my_list:
         if len(i) >= 5:
             my_list[my_list.index(i)] = i[::-1]
