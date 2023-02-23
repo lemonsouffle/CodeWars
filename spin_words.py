@@ -10,7 +10,8 @@
 # spinWords( "This is another test" )=> returns "This is rehtona test"
 
 def spin_words(sentence):
-    for i in sentence.split(' '):
+    my_list = sentence.split(' ')
+    for i in my_list:
         my_list[my_list.index(i)] = i[::-1] if len(i) >= 5 else i
     return ' '.join(my_list)
 
