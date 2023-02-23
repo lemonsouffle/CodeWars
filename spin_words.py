@@ -13,14 +13,11 @@ def spin_words(sentence):
     my_list = sentence.split(' ')
     new_sentence = ''
     for i in my_list:
-        if my_list.index(i) != 0 and len(my_list) != 1 :
-            new_sentence += ' '
-            
         if len(i) >= 5:
-            new_sentence += i[::-1]
+            my_list[my_list.index(i)] = i[::-1]
         else:
-            new_sentence += i
-    return new_sentence
+            my_list[my_list.index(i)] = i
+    return ' '.join(my_list)
 
 print(spin_words("Welcome"))
 print(spin_words("to"))
